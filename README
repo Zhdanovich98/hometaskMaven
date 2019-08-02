@@ -1,0 +1,28 @@
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart
+
+mvn package
+
+mvn exec:java -Dexec.args="2 / 2"
+
+mvn exec:java
+
+______________________
+mvn test -Dtest=Run#positiveTest test
+
+mvn test -Dtest=Run#negativeTestMore test
+
+mvn test -Dtest=Run#negativeTestEquals test
+
+
+____________________
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart
+
+mvn package (x3)
+
+java -jar module1-1-jar-with-dependencies.jar
+
+
