@@ -6,11 +6,11 @@ import com.zhdanovich.exception.SizeArrayOnlyThree;
 
 public class Main {
 
-	ArrayList<String> valueList = new ArrayList<String>(); ;
-	/**
-	 * @param args
-	 */
+	//list for work with arguments
+	ArrayList<String> valueList = new ArrayList<String>(); 
 	
+	//operation result calculation method
+
 	public double resultOperation() {	
 		try {
 			double a = Double.parseDouble(valueList.get(0));
@@ -43,16 +43,14 @@ public class Main {
 	}
 	
 	public static void main(String args[]) throws SizeArrayOnlyThree{
-		Main main = new Main();
+
+		Main main = new Main();	
 		try {
-			int i = 0;
-			for(String arg : args) {
-				if(main.valueList.size()>2) throw new SizeArrayOnlyThree("max three arguments!");
-		main.valueList.add(arg); 
-		i++;
-		   }
-		
-		
+		for(int i = 0; i< args.length; i++) {
+			if(main.valueList.size()>2) throw new SizeArrayOnlyThree("max three arguments!");
+			main.valueList.add(args[i]);		
+		}		
+
 	System.out.println("a: " + main.valueList.get(0) );
 	System.out.println("operation: " + main.valueList.get(1) );
 	System.out.println("b: " + main.valueList.get(2) );
